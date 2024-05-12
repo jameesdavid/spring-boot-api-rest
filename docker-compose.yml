@@ -1,0 +1,18 @@
+version: '3.8'
+
+services:
+  mysql:
+    image: mysql:8.0
+    environment:
+      MYSQL_ROOT_PASSWORD: jamees123
+      MYSQL_DATABASE: spring-boot-descomplica
+      MYSQL_USER: jamees
+      MYSQL_PASSWORD: 123456
+    ports:
+      - "3306:3306"
+    volumes:
+      - mysql_descomplica_data:/var/lib/mysql
+    restart: always
+
+volumes:
+  mysql_descomplica_data:
